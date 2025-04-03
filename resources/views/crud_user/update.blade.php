@@ -35,6 +35,41 @@
                                     @endif
                                 </div>
 
+
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Ghi chú" id="ghi_chu" class="form-control"
+                                           name="ghichu" required autofocus>
+                                    @if ($errors->has('ghichu'))
+                                        <span class="text-danger">{{ $errors->first('ghichu') }}</span>
+                                    @endif
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <input type="number" placeholder="Số Nhà" id="sonha" class="form-control"
+                                           name="sonha" required autofocus>
+                                    @if ($errors->has('sonha'))
+                                        <span class="text-danger">{{ $errors->first('sonha') }}</span>
+                                    @endif
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="Giới thiệu" id="gioithieu" class="form-control"
+                                           name="gioithieu" required autofocus>
+                                    @if ($errors->has('gioithieu'))
+                                        <span class="text-danger">{{ $errors->first('gioithieu') }}</span>
+                                    @endif
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <input type="number" placeholder="Số cây" id="socay" class="form-control"
+                                           name="sonha" required autofocus>
+                                    @if ($errors->has('socay'))
+                                        <span class="text-danger">{{ $errors->first('socay') }}</span>
+                                    @endif
+                                </div>
+
+                                
+
                                 <div class="d-grid mx-auto">
                                     <button type="submit" class="btn btn-dark btn-block">Update</button>
                                 </div>
