@@ -59,12 +59,21 @@ class CrudUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
+            'ghichu' => 'required',
+            'sonha' => 'required',
+            'gioithieu' => 'required',
+            'socay' => 'required',
+
         ]);
 
         $data = $request->all();
         $check = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'ghichu' => $data['ghichu'],
+            'sonha' => $data['sonha'],
+            'gioithieu' => $data['name'],
+            'socay' => $data['email'],
             'password' => Hash::make($data['password'])
         ]);
 
@@ -113,11 +122,19 @@ class CrudUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users,id,'.$input['id'],
             'password' => 'required|min:6',
+            'ghichu' => 'required',
+            'sonha' => 'required',
+            'gioithieu' => 'required',
+            'socay' => 'required'
         ]);
 
        $user = User::find($input['id']);
        $user->name = $input['name'];
        $user->email = $input['email'];
+       $user->ghichu = $input['ghichu'];
+       $user->sonha = $input['sonha'];
+       $user->gioithieu = $input['gioithieu'];
+       $user->socay = $input['socay'];
        $user->password = $input['password'];
        $user->save();
 
